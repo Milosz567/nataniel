@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- POLL --- 
     const candidates = [
         "Nataniel Czubak & milosz", "Nikita Nesterenko", "Silence Ennis",
-        "Lida Lichota", "Mateusz Gorzowski", "Radek Szarek", "Michał Makłowicz", "Arina Chernyshova", "Marcin Majewski"];
+        "Lida Lichota", "Mateusz Gorzowski", "Radek Szarek", "Michał Makłowicz", "Arina Chernyshova", "Marcin Majewski", "Gabriela Skater"];
 
     const pollOptionsContainer = document.querySelector('.poll-options');
     if (pollOptionsContainer) {
