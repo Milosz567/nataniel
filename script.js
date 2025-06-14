@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentLang = 'pl';
 
-    // --- LANGUAGE & THEME --- 
     function setLanguage(lang) {
         currentLang = lang;
         localStorage.setItem('lang', lang);
@@ -109,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
         applyTheme(newTheme);
     });
 
-    // --- MODAL --- 
     const modal = document.getElementById('custom-modal');
     const modalMessage = document.getElementById('modal-message');
     const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -134,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- POLL --- 
     const candidates = [
         "Nataniel Czubak & milosz", "Nikita Nesterenko", "Silence Ennis",
         "Lida Lichota", "Mateusz Gorzowski", "Radek Szarek", "Michał Makłowicz", "Arina Chernyshova", "Marcin Majewski"];
@@ -172,20 +169,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Optimistic UI update
             showModal(translations[currentLang].thank_you_for_voting);
             localStorage.setItem('hasVoted', 'true');
 
             updateVotes(selectedCandidates).catch(error => {
                 console.error('Vote submission failed:', error);
-                // Optional: Revert UI change and show error
                 localStorage.removeItem('hasVoted');
                 showModal(translations[currentLang].vote_failed);
             });
         });
     }
 
-    // --- JSONBIN.IO API --- 
     const BIN_ID = '684c78cc8a456b7966ada270';
     const API_KEY = '$2a$10$CYmmI5ZVyBw4z5I7t7w2VOAXJ6jr8HqDpxGecWlToqJLiZrH/9l7K';
 
@@ -217,13 +211,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!putResponse.ok) throw new Error('Failed to update votes.');
     }
 
-    // --- INITIALIZATION --- 
     const savedTheme = localStorage.getItem('theme') || 'light-mode';
     const savedLang = localStorage.getItem('lang') || 'pl';
     applyTheme(savedTheme);
     setLanguage(savedLang);
 
-    // --- ANIMATIONS ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
