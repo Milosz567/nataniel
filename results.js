@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // IMPORTANT: Setup your JSONBin.io account to get these values.
     const BIN_ID = '684c78cc8a456b7966ada270'; 
     const API_KEY = '$2a$10$CYmmI5ZVyBw4z5I7t7w2VOAXJ6jr8HqDpxGecWlToqJLiZrH/9l7K';
 
@@ -61,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsGrid.appendChild(resultElement);
             
             const bar = resultElement.querySelector('.result-bar');
-            // Use a timeout to ensure the transition plays after the element is added to the DOM
             setTimeout(() => {
                 bar.style.width = `${percentage}%`;
             }, 100);
