@@ -1,4 +1,3 @@
-/* === VARIABLES & GLOBAL STYLES === */
 :root {
     --primary-color: #0a4d68;
     --secondary-color: #088395;
@@ -55,7 +54,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
 }
 
-/* === HEADER & NAVIGATION === */
 header {
     background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
@@ -100,7 +98,6 @@ header {
 .theme-switcher.dark .moon-icon { display: block; }
 .theme-switcher.dark .sun-icon { display: none; }
 
-/* === HERO SECTION === */
 .hero {
     text-align: center;
     padding: 100px 20px 60px;
@@ -119,7 +116,6 @@ header {
     color: var(--text-light);
 }
 
-/* === SECTIONS & CARDS === */
 main {
     padding-top: 40px;
 }
@@ -148,7 +144,6 @@ h2 {
     box-shadow: 0 8px 25px var(--shadow-color);
 }
 
-/* --- Section Styling & Animations --- */
 .page-section {
     padding: 5rem 0;
 }
@@ -178,7 +173,6 @@ h2 {
     text-align: center;
 }
 
-/* === POLL SECTION === */
 .poll-container {
     background-color: var(--card-bg);
     padding: 2rem 2.5rem;
@@ -295,7 +289,6 @@ h2 {
     min-height: 1.2em;
 }
 
-/* === RESULTS PAGE === */
 .results-container {
     background-color: var(--card-bg);
     padding: 2rem 2.5rem;
@@ -331,7 +324,7 @@ h2 {
     background-color: var(--secondary-color);
     height: 100%;
     border-radius: 5px;
-    width: 0; /* Initial width for animation */
+    width: 0;
     transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -341,7 +334,6 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* === FOOTER === */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -350,8 +342,6 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 60px;
 }
-
-/* === RESPONSIVE DESIGN === */
 @media (max-width: 992px) {
     .poll-options {
         grid-template-columns: repeat(2, 1fr);
@@ -377,14 +367,12 @@ footer {
         padding: 1.5rem;
     }
 }
-
-/* === BUTTONS & LINKS === */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     background-color: var(--secondary-color);
-    color: white !important; /* Ensure text is white */
+    color: white !important;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
@@ -438,7 +426,6 @@ footer .btn.prominent:hover {
     color: #fff;
 }
 
-/* === MODAL === */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -489,8 +476,6 @@ footer .btn.prominent:hover {
     width: 100%;
 }
 
-
-/* === RESPONSIVE DESIGN === */
 @media (max-width: 992px) {
     .poll-options {
         grid-template-columns: repeat(2, 1fr);
